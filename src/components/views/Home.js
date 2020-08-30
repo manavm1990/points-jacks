@@ -3,8 +3,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 export const Home = () => (
-  <>
-    <h1>How To Play - Three Jacks</h1>
+  <section className="center mt-4">
+    <h2 className="title">How To Play - Three Jacks</h2>
     <p>
       This game is designed to be played with 2 players sitting at 1{" "}
       <span role="img" aria-label="keyboard">
@@ -63,6 +63,6 @@ export const Home = () => (
         🤷🏽‍♂️
       </span>
     </footer>
-    <Link to="/game">Start Game!</Link>
-  </>
+    <Link to="/game" className="button button-primary mt-2">Start Game!</Link>
+  </section>
 );
