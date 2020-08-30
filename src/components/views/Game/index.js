@@ -7,7 +7,7 @@ import api from "api";
 function reducer(state, action) {
   switch (action.type) {
     case "draw":
-      return { ...state, currCard: action.card, stopDraw: action.stopDraw };
+      return { ...state, currCard: action.card, jacksCount: state.jacksCount + Number(action.stopDraw), stopDraw: action.stopDraw };
     case "update": {
       const { payload } = action;
       console.log(payload)
