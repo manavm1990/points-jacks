@@ -55,7 +55,7 @@ export const Home = () => (
       </span>
     </p>
     <footer>
-      I actually intended to make <a href="https://bicyclecards.com/how-to-play/slapjack/" target="_blank" rel="noreferrer"> &apos;Slap Jacks&apos;</a> - but didn&apos;t
+      I actually intended to make <a href="https://bicyclecards.com/how-to-play/slapjack/" target="_blank" rel="noopener noreferrer"> &apos;Slap Jacks&apos;</a> - but didn&apos;t
       realize that rules of that game are much different...so I made this
       one.&nbsp;
       <span role="img" aria-label="shrug">
