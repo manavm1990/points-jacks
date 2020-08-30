@@ -49,8 +49,7 @@ export const Home = () => (
       </strong>
     </p>
     <p>
-      The game will continue until someone scores &quot;3,&quot; or until we are
-      out of Jacks; in this case, there would be a 2-2 tie&nbsp;
+      The game will continue until all 4 Jacks are gone.
       <span role="img" aria-label="shrug">
         🤷🏽‍♂️.
       </span>
