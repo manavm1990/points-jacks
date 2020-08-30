@@ -66,7 +66,7 @@ export const Game = () => {
           type: "draw",
           card: cards[0],
         });
-      }, 100);
+      }, 1000);
 
       // Cleanup fxn.
       return () => clearInterval(intervalId);
