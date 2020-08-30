@@ -9,7 +9,7 @@ export const PlayerDetails = ({ points, handler }) => {
     return () => {
       window.removeEventListener("keydown", handler);
     };
-  }, []);
+  }, [handler]);
 
   return (
     <p className="is-size-2">
