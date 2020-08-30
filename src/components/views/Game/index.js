@@ -1,5 +1,7 @@
 import React, { useEffect, useReducer, useState } from "react";
 
+import {PlayerDetails} from "./PlayerDisplay"
+
 import api from "api";
 
 function reducer(state, action) {
@@ -35,7 +37,7 @@ export const Game = () => {
     while (!gameDeets.stopDraw) {
       const intervalId = setInterval(async () => {
         const { cards } = await api.draw1(deckId);
-        dispatch({ type: "draw", card: cards[0].image, stopDraw: cards[0].value === "JACK" });
+        dispatch({ type: "draw", card: cards[0], stopDraw: cards[0].value === "JACK" });
       }, 1000);
 
       // Cleanup fxn.
@@ -43,5 +45,18 @@ export const Game = () => {
     }
   });
 
-  return <h1>Game!</h1>;
+  const playerHandler = (event) => {
+    console.log('event', event)
+  }
+
+  return (
+    <>
+      <img src={gameDeets.currCard?.image} alt={gameDeets.currCard?.value} className="mt-3"/>
+      <div className="flex flex--justify-between container">
+        <PlayerDetails points={gameDeets.p1Score} handler={playerHandler} />
+        <PlayerDetails points={gameDeets.p2Score} handler={playerHandler} />
+      </div>
+      ;
+    </>
+  );
 };
