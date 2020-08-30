@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 export const Home = () => (
   <section className="center mt-4">
-    <h2 className="title">How To Play - Three Jacks</h2>
+    <h2 className="title">How To Play - Points Jacks</h2>
     <p>
       This game is designed to be played with 2 players sitting at 1{" "}
       <span role="img" aria-label="keyboard">
