@@ -19,6 +19,7 @@
     "extends": [
       "react-app",
       "plugin:react/recommended",
+      "plugin:react-hooks/recommended",
       "plugin:jsx-a11y/recommended",
       "prettier"
     ],
@@ -29,8 +30,13 @@
     },
     "plugins": [
       "jsx-a11y",
-      "react"
-    ]
+      "react",
+      "react-hooks"
+    ],
+    "rules": {
+      "react-hooks/rules-of-hooks": "error",
+      "react-hooks/exhaustive-deps": "warn"
+    }
   },
   "browserslist": {
     "production": [
