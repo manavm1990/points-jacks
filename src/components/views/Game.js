@@ -35,7 +35,6 @@ export const Game = () => {
     while (!gameDeets.stopDraw) {
       const intervalId = setInterval(async () => {
         const { cards } = await api.draw1(deckId);
-        console.log(cards[0].value);
         dispatch({ type: "draw", card: cards[0].image, stopDraw: cards[0].value === "JACK" });
       }, 1000);
 
