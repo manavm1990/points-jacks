@@ -8,6 +8,9 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.3"
   },
+  "resolutions": {
+    "styled-components": "^5"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build"
@@ -46,14 +49,18 @@
     "eslint-plugin-react": "^7.20.6",
     "prettier": "2.1.1",
     "stylelint": "^13.6.1",
-    "stylelint-config-sass-guidelines": "^7.0.0",
-    "stylelint-config-standard": "^20.0.0",
-    "stylelint-order": "^4.1.0"
+    "stylelint-config-recommended": "^3.0.0",
+    "stylelint-config-styled-components": "^0.1.1",
+    "stylelint-order": "^4.1.0",
+    "stylelint-processor-styled-components": "^1.10.0"
   },
   "stylelint": {
+    "processors": [
+      "stylelint-processor-styled-components"
+    ],
     "extends": [
-      "stylelint-config-standard",
-      "stylelint-config-sass-guidelines"
+      "stylelint-config-recommended",
+      "stylelint-config-styled-components"
     ],
     "plugins": [
       "stylelint-order"
