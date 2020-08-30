@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 export const Home = () => (
   <>
-    <h1>How To Play - SlapJack</h1>
+    <h1>How To Play - Three Jacks</h1>
     <p>
       This game is designed to be played with 2 players sitting at 1{" "}
       <span role="img" aria-label="keyboard">
@@ -52,10 +52,17 @@ export const Home = () => (
       The game will continue until someone scores &quot;3,&quot; or until we are
       out of Jacks; in this case, there would be a 2-2 tie&nbsp;
       <span role="img" aria-label="shrug">
+        🤷🏽‍♂️.
+      </span>
+    </p>
+    <footer>
+      I actually intended to make <a href="https://bicyclecards.com/how-to-play/slapjack/" target="_blank" rel="noreferrer"> &apos;Slap Jacks&apos;</a> - but didn&apos;t
+      realize that rules of that game are much different...so I made this
+      one.&nbsp;
+      <span role="img" aria-label="shrug">
         🤷🏽‍♂️
       </span>
-      .
-    </p>
+    </footer>
     <Link to="/game">Start Game!</Link>
   </>
 );
