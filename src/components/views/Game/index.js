@@ -7,13 +7,14 @@ import api from "api";
 function reducer(state, action) {
   switch (action.type) {
     case "draw":
-      const stopDraw = action.card.value === "JACK";
-      return { ...state, currCard: action.card, jacksCount: state.jacksCount + Number(stopDraw), stopDraw };
+      const {card} = action
+      const stopDraw = card.value === "JACK";
+      return { ...state, card: card, jacksCount: state.jacksCount + Number(stopDraw), stopDraw };
     case "update": {
       const { payload } = action;
       return {
         ...state,
-        [payload]: state[payload] + (Number(state.currCard.value === "JACK") || -1),
+        [payload]: state[payload] + (Number(state.card.value === "JACK") || -1),
         stopDraw: false,
       };
     }
@@ -24,7 +25,7 @@ function reducer(state, action) {
 
 export const Game = () => {
   const [gameDeets, dispatch] = useReducer(reducer, {
-    currCard: null,
+    card: null,
     jacksCount: 0,
     p1Score: 0,
     p2Score: 0,
@@ -47,7 +48,7 @@ export const Game = () => {
         const { cards } = await api.draw1(deckId);
         dispatch({
           type: "draw",
-          card: cards[0],
+          card: cards[0]
         });
       }, 1000);
 
@@ -71,8 +72,8 @@ export const Game = () => {
   return (
     <>
       <img
-        src={gameDeets.currCard?.image}
-        alt={gameDeets.currCard?.value}
+        src={gameDeets.card?.image}
+        alt={gameDeets.card?.value}
         className="mt-3"
       />
       <div className="flex flex--justify-between container">
