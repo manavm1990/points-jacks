@@ -6,12 +6,12 @@ import api from "api";
 
 function findWinner(p1Score, p2Score) {
   if (p1Score > p2Score) {
-        return "Player 1 Wins!"
-      }
-      if (p2Score > p1Score) {
-        return "Player 2 Wins!"
-      }
-      return "It's a Tie!"
+    return "Player 1 Wins!";
+  }
+  if (p2Score > p1Score) {
+    return "Player 2 Wins!";
+  }
+  return "It's a Tie!";
 }
 
 function reducer(state, action) {
@@ -31,8 +31,9 @@ function reducer(state, action) {
         ...state,
         [payload]: state[payload] + (Number(state.card.value === "JACK") || -1),
         stopDraw: false,
-        winner: state.jacksCount === 4 && findWinner(state.p1Score, state.p2Score)
-      };      
+        winner:
+          state.jacksCount === 4 && findWinner(state.p1Score, state.p2Score),
+      };
     default:
       return state;
   }
