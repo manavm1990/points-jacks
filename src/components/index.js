@@ -1,1 +1,3 @@
-export {Home, Game} from "./views"
+export { Header } from "./Header"
+
+export { Home, Game } from "./views"
