@@ -37,6 +37,18 @@ export const Home = () => (
     <p>The first player to press their button will get the point.</p>
     <p>Then, cards will continue being dealt.</p>
     <p>
+      <strong>
+        <span role="img" aria-label="warning">
+          ⚠️
+        </span>
+        &nbsp; Be careful! If you tap your &nbsp;
+        <span role="img" aria-label="key">
+          🔑,
+        </span>
+        &nbsp; when there isn&apos;t a Jack, you lose a point!
+      </strong>
+    </p>
+    <p>
       The game will continue until someone scores &quot;3,&quot; or until we are
       out of Jacks; in this case, there would be a 2-2 tie&nbsp;
       <span role="img" aria-label="shrug">
