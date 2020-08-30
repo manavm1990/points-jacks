@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import { Home, Game } from "./components";
 
-import "./App.css";
+import "./App.scss"
 
 export const App = () => (
   <Router>

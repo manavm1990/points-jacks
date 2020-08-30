@@ -3,13 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "node-sass": "^4.14.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.3"
-  },
-  "resolutions": {
-    "styled-components": "^5"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -51,27 +49,28 @@
     ]
   },
   "devDependencies": {
+    "bulma": "^0.9.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-react": "^7.20.6",
     "prettier": "2.1.1",
     "stylelint": "^13.6.1",
-    "stylelint-config-recommended": "^3.0.0",
-    "stylelint-config-styled-components": "^0.1.1",
+    "stylelint-config-sass-guidelines": "^7.0.0",
+    "stylelint-config-standard": "^20.0.0",
     "stylelint-order": "^4.1.0",
-    "stylelint-processor-styled-components": "^1.10.0"
+    "stylelint-scss": "^3.18.0"
   },
   "stylelint": {
-    "processors": [
-      "stylelint-processor-styled-components"
-    ],
     "extends": [
-      "stylelint-config-recommended",
-      "stylelint-config-styled-components"
+      "stylelint-config-standard",
+      "stylelint-config-sass-guidelines"
     ],
     "plugins": [
-      "stylelint-order"
+      "stylelint-order",
+      "stylelint-scss"
     ],
     "rules": {
+      "declaration-colon-newline-after": null,
+      "number-leading-zero": null,
       "order/order": [
         "custom-properties",
         "declarations"
@@ -79,7 +78,11 @@
       "order/properties-order": [
         "width",
         "height"
-      ]
+      ],
+      "order/properties-alphabetical-order": true,
+      "scss/at-import-no-partial-leading-underscore": null,
+      "string-quotes": "double",
+      "value-list-comma-newline-after": null
     }
   }
 }
