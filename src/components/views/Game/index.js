@@ -11,7 +11,6 @@ function reducer(state, action) {
       return { ...state, currCard: action.card, jacksCount: state.jacksCount + Number(stopDraw), stopDraw };
     case "update": {
       const { payload } = action;
-      console.log(payload)
       return {
         ...state,
         [payload]: state[payload] + (Number(state.currCard.value === "JACK") || -1),
