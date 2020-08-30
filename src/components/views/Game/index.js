@@ -7,7 +7,8 @@ import api from "api";
 function reducer(state, action) {
   switch (action.type) {
     case "draw":
-      return { ...state, currCard: action.card, jacksCount: state.jacksCount + Number(action.stopDraw), stopDraw: action.stopDraw };
+      const stopDraw = action.card.value === "JACK";
+      return { ...state, currCard: action.card, jacksCount: state.jacksCount + Number(stopDraw), stopDraw };
     case "update": {
       const { payload } = action;
       console.log(payload)
@@ -48,7 +49,6 @@ export const Game = () => {
         dispatch({
           type: "draw",
           card: cards[0],
-          stopDraw: cards[0].value === "JACK",
         });
       }, 1000);
 
